@@ -13,7 +13,7 @@ Une implémentation complète du protocole SNMP (Simple Network Management Proto
 ## Installation
 
 ```bash
-go get github.com/edgeo/drivers/snmp
+go get github.com/edgeo-scada/snmp
 ```
 
 ## Fonctionnalités
@@ -37,7 +37,7 @@ import (
     "fmt"
     "log"
 
-    "github.com/edgeo/drivers/snmp/snmp"
+    "github.com/edgeo-scada/snmp/snmp"
 )
 
 func main() {

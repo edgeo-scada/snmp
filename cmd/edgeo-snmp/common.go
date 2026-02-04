@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/edgeo/drivers/snmp/snmp"
+	"github.com/edgeo-scada/snmp/snmp"
 )
 
 // createClient creates and connects an SNMP client with the current configuration.

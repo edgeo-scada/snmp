@@ -1,4 +1,4 @@
-module github.com/edgeo/drivers/snmp
+module github.com/edgeo-scada/snmp
 
 go 1.22
 
