@@ -4,9 +4,9 @@ slug: /
 
 # SNMP Driver
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
-![Go](https://img.shields.io/badge/Go-1.21+-00ADD8?logo=go)
-![License](https://img.shields.io/badge/license-MIT-green)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](./changelog)
+[![Go](https://img.shields.io/badge/go-1.21+-00ADD8.svg)](https://go.dev/)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/edgeo-scada/snmp/blob/main/LICENSE)
 
 A complete implementation of the SNMP (Simple Network Management Protocol) protocol in Go, supporting versions v1, v2c, and v3.
 
@@ -136,4 +136,4 @@ edgeo-snmp trap-listen --listen ":1162"
 
 ## License
 
-MIT License - see [LICENSE](../../LICENSE) for more details.
+Apache License 2.0 - see [LICENSE](https://github.com/edgeo-scada/snmp/blob/main/LICENSE) for details.
