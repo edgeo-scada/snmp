@@ -1,7 +1,3 @@
----
-slug: /snmp/examples/trap-listener
----
-
 # Exemple: Listener de traps
 
 Cet exemple montre comment créer un listener pour recevoir et traiter les notifications SNMP (traps).

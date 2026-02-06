@@ -1,7 +1,3 @@
----
-slug: /snmp/options
----
-
 # Options de configuration
 
 La librairie SNMP utilise le pattern des options fonctionnelles pour une configuration flexible et extensible.

@@ -1,7 +1,3 @@
----
-slug: /snmp/getting-started
----
-
 # Getting Started
 
 This guide will help you get started quickly with the SNMP library.

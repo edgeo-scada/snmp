@@ -1,7 +1,3 @@
----
-slug: /snmp/examples/basic-client
----
-
 # Exemple: Client SNMP basique
 
 Cet exemple montre comment utiliser le client SNMP pour récupérer des informations depuis un agent SNMP.

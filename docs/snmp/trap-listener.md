@@ -1,7 +1,3 @@
----
-slug: /snmp/trap-listener
----
-
 # Listener de traps
 
 Le TrapListener permet de recevoir et traiter les notifications SNMP (traps et informs) envoyées par les agents.

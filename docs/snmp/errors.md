@@ -1,7 +1,3 @@
----
-slug: /snmp/errors
----
-
 # Gestion des erreurs
 
 La librairie SNMP fournit une gestion complète des erreurs avec des types spécifiques pour différencier les erreurs protocole des erreurs réseau.

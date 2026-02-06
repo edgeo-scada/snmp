@@ -1,7 +1,3 @@
----
-slug: /snmp/pool
----
-
 # Pool de connexions
 
 Le pool de connexions permet de gérer efficacement plusieurs connexions SNMP vers un même agent, optimisant les performances pour les applications à fort trafic.

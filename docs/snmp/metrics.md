@@ -1,7 +1,3 @@
----
-slug: /snmp/metrics
----
-
 # Métriques
 
 La librairie SNMP inclut un système de métriques intégré pour le monitoring et l'observabilité des opérations SNMP.

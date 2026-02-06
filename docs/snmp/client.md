@@ -1,7 +1,3 @@
----
-slug: /snmp/client
----
-
 # Client SNMP
 
 Le client SNMP est le composant principal pour interagir avec les agents SNMP.
