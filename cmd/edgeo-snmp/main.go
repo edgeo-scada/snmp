@@ -1,4 +1,3 @@
-// edgeo-snmp is a command-line SNMP client for testing, debugging, and monitoring.
 package main
 
 import (

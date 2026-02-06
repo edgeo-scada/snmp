@@ -1,5 +1,5 @@
 ---
-slug: /snmp
+slug: /
 ---
 
 # SNMP Driver
@@ -8,7 +8,7 @@ slug: /snmp
 ![Go](https://img.shields.io/badge/Go-1.21+-00ADD8?logo=go)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-Une implémentation complète du protocole SNMP (Simple Network Management Protocol) en Go, supportant les versions v1, v2c et v3.
+A complete implementation of the SNMP (Simple Network Management Protocol) protocol in Go, supporting versions v1, v2c, and v3.
 
 ## Installation
 
@@ -16,18 +16,18 @@ Une implémentation complète du protocole SNMP (Simple Network Management Proto
 go get github.com/edgeo-scada/snmp
 ```
 
-## Fonctionnalités
+## Features
 
-- ✅ **Support multi-version** : SNMPv1, SNMPv2c et SNMPv3
-- ✅ **Opérations complètes** : GET, GET-NEXT, GET-BULK, SET, WALK
-- ✅ **Réception de traps** : Listener pour notifications SNMP
-- ✅ **Pool de connexions** : Gestion optimisée des connexions
-- ✅ **SNMPv3 Security** : AuthNoPriv et AuthPriv (MD5/SHA, DES/AES)
-- ✅ **Métriques intégrées** : Compteurs, jauges et histogrammes de latence
-- ✅ **Encodage BER** : Implémentation complète ASN.1/BER
-- ✅ **CLI complète** : Outil en ligne de commande `edgeo-snmp`
+- **Multi-version support**: SNMPv1, SNMPv2c, and SNMPv3
+- **Complete operations**: GET, GET-NEXT, GET-BULK, SET, WALK
+- **Trap reception**: Listener for SNMP notifications
+- **Connection pool**: Optimized connection management
+- **SNMPv3 Security**: AuthNoPriv and AuthPriv (MD5/SHA, DES/AES)
+- **Built-in metrics**: Counters, gauges, and latency histograms
+- **BER encoding**: Complete ASN.1/BER implementation
+- **Full CLI**: `edgeo-snmp` command-line tool
 
-## Exemple rapide
+## Quick Example
 
 ```go
 package main
@@ -43,7 +43,7 @@ import (
 func main() {
     ctx := context.Background()
 
-    // Créer un client SNMPv2c
+    // Create an SNMPv2c client
     client, err := snmp.NewClient(ctx,
         snmp.WithTarget("192.168.1.1:161"),
         snmp.WithVersion(snmp.Version2c),
@@ -54,7 +54,7 @@ func main() {
     }
     defer client.Close()
 
-    // Récupérer les informations système
+    // Retrieve system information
     vars, err := client.Get(ctx,
         snmp.OIDSysDescr,
         snmp.OIDSysName,
@@ -70,70 +70,70 @@ func main() {
 }
 ```
 
-## Structure du package
+## Package Structure
 
 ```
 snmp/
 ├── snmp/
-│   ├── client.go      # Client SNMP principal
-│   ├── pool.go        # Pool de connexions
-│   ├── trap.go        # Listener de traps
-│   ├── protocol.go    # Encodage/décodage BER
-│   ├── packets.go     # Structures PDU et messages
-│   ├── types.go       # Types et OIDs
-│   ├── options.go     # Options de configuration
-│   ├── errors.go      # Gestion des erreurs
-│   ├── metrics.go     # Métriques
-│   └── version.go     # Versions SNMP
+│   ├── client.go      # Main SNMP client
+│   ├── pool.go        # Connection pool
+│   ├── trap.go        # Trap listener
+│   ├── protocol.go    # BER encoding/decoding
+│   ├── packets.go     # PDU structures and messages
+│   ├── types.go       # Types and OIDs
+│   ├── options.go     # Configuration options
+│   ├── errors.go      # Error handling
+│   ├── metrics.go     # Metrics
+│   └── version.go     # SNMP versions
 └── cmd/
     └── edgeo-snmp/    # CLI
 ```
 
 ## Documentation
 
-- [Démarrage rapide](getting-started.md)
-- [Client SNMP](client.md)
-- [Options de configuration](options.md)
-- [Gestion des erreurs](errors.md)
-- [Métriques](metrics.md)
-- [Pool de connexions](pool.md)
-- [Listener de traps](trap-listener.md)
+- [Getting Started](getting-started.md)
+- [SNMP Client](client.md)
+- [Configuration Options](options.md)
+- [Error Handling](errors.md)
+- [Metrics](metrics.md)
+- [Connection Pool](pool.md)
+- [Trap Listener](trap-listener.md)
 - [Changelog](changelog.md)
 
-## Exemples
+## Examples
 
-- [Client basique](examples/basic-client.md)
-- [Listener de traps](examples/trap-listener.md)
+- [Basic Client](examples/basic-client.md)
+- [Trap Listener](examples/trap-listener.md)
 
 ## CLI
 
-L'outil `edgeo-snmp` fournit une interface en ligne de commande complète :
+The `edgeo-snmp` tool provides a full command-line interface:
 
 ```bash
-# Informations système
+# System information
 edgeo-snmp info -t 192.168.1.1
 
-# GET simple
+# Simple GET
 edgeo-snmp get -t 192.168.1.1 1.3.6.1.2.1.1.1.0
 
-# Walk d'un sous-arbre
+# Walk a subtree
 edgeo-snmp walk -t 192.168.1.1 1.3.6.1.2.1.2.2
 
-# SET d'une valeur
+# SET a value
 edgeo-snmp set -t 192.168.1.1 1.3.6.1.2.1.1.4.0 s "admin@example.com"
 
-# Écoute des traps
+# Listen for traps
 edgeo-snmp trap-listen --listen ":1162"
 ```
 
-## Versions SNMP supportées
+## Supported SNMP Versions
 
-| Version | Authentification | Chiffrement | Bulk Operations |
-|---------|-----------------|-------------|-----------------|
-| v1      | Community       | Non         | Non             |
-| v2c     | Community       | Non         | Oui             |
-| v3      | USM (MD5/SHA)   | DES/AES     | Oui             |
+| Version | Authentication | Encryption | Bulk Operations |
+|---------|---------------|------------|-----------------|
+| v1      | Community     | No         | No              |
+| v2c     | Community     | No         | Yes             |
+| v3      | USM (MD5/SHA) | DES/AES   | Yes             |
 
-## Licence
+## License
 
-MIT License - voir [LICENSE](../../LICENSE) pour plus de détails.
+MIT License - see [LICENSE](../../LICENSE) for more details.
