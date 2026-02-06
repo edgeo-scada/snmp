@@ -24,7 +24,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/edgeo-scada/snmp/snmp"
+	"github.com/edgeo-scada/snmp"
 )
 
 // OutputFormat represents the output format type.

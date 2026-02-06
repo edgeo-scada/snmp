@@ -25,7 +25,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/edgeo-scada/snmp/snmp"
+	"github.com/edgeo-scada/snmp"
 	"github.com/spf13/cobra"
 )
 
